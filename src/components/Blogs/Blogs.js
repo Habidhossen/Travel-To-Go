@@ -1,19 +1,16 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Blogs = () => {
   return (
     <div>
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nulla
+        est, numquam optio commodi quia repellat corporis explicabo, esse
+        reprehenderit officiis accusamus. Velit harum similique eligendi facilis
+        aperiam consequatur quo reiciendis cumque laborum hic, tempore earum
+        dolore quibusdam fugiat obcaecati, reprehenderit ex voluptates
+        doloremque sint at perferendis libero? Iste, obcaecati!
+      </p>
     </div>
   );
 };
