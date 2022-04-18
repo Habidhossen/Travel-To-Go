@@ -1,0 +1,14 @@
+/* #1EC28B */
+.banner h5 {
+  color: #23d89c;
+  text-transform: uppercase;
+}
+.banner h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+.banner p {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 400;
+}
