@@ -42,3 +42,22 @@
   color: #23d89c;
   border: 1px solid #23d89c;
 }
+.google-btn {
+  background-color: salmon;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 10px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid salmon;
+  transition: 0.2s;
+}
+.google-btn:hover {
+  background-color: transparent;
+  color: salmon;
+  border: 1px solid salmon;
+}
