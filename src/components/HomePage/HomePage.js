@@ -34,7 +34,7 @@ const HomePage = () => {
     <div>
       <section className="container">
         <div className="row mt-5">
-          <div className="col-5 d-flex align-items-center">
+          <div className="col-sm-6 col-md-5 col-lg-5 d-flex align-items-center">
             <div className="banner">
               <h5>Its Time To Adventure</h5>
               <h1>Explore a new world</h1>
@@ -45,7 +45,7 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div className="col-7">
+          <div className="col-sm-6 col-md-7 col-lg-7">
             <img className="banner-img img-fluid" src={banner} alt="" />
           </div>
         </div>
