@@ -1,0 +1,40 @@
+.checkout-btn {
+  background-color: #23d89c;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 10px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid #23d89c;
+  transition: 0.2s;
+}
+.checkout-btn:hover {
+  background-color: transparent;
+  color: #23d89c;
+  border: 1px solid #23d89c;
+}
+.card {
+  /* height: 430px; */
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.card-img {
+  width: 230px;
+}
+.card-detail {
+  height: 150px;
+}
+.card-title {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 12px;
+}
