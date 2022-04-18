@@ -9,29 +9,25 @@ const HomePage = () => {
       id: 1,
       title: "Zip lines",
       desc: "Add some adrenalin to your travel senses by zipline tarvel.",
-      image:
-        "https://media.creativemornings.com/uploads/user/avatar/268533/cv_self_portrait_b_w_square.jpg",
+      image: "https://i.ibb.co/RypjCnK/zip-line.jpg",
     },
     {
       id: 2,
       title: "Kayaking",
       desc: "Kayaking makes takes thrill to the next level.",
-      image:
-        "https://media.creativemornings.com/uploads/user/avatar/268533/cv_self_portrait_b_w_square.jpg",
+      image: "https://i.ibb.co/1vz409v/Kayaking.jpg",
     },
     {
       id: 3,
       title: "Bungee Jump",
       desc: "Bungee jumps is one of the most exhilarating adventure.",
-      image:
-        "https://media.creativemornings.com/uploads/user/avatar/268533/cv_self_portrait_b_w_square.jpg",
+      image: "https://i.ibb.co/Qd32vKY/bungee-jump.jpg",
     },
     {
       id: 4,
       title: "Travel Equipments",
       desc: "Explore adventure with Trekking Hat, Jacket, Camping Shoe, Bag etc.",
-      image:
-        "https://media.creativemornings.com/uploads/user/avatar/268533/cv_self_portrait_b_w_square.jpg",
+      image: "https://i.ibb.co/qB6YmCx/equipments.jpg",
     },
   ];
   return (
@@ -57,6 +53,7 @@ const HomePage = () => {
       {/* Services Section */}
       <section className="services-section">
         <div className="container">
+          <h1 className="services-section-header">Services</h1>
           <div className="row">
             {servicesData.map((service) => (
               <Service key={service.id} service={service} />
