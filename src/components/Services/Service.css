@@ -13,15 +13,21 @@
   width: 230px;
 }
 .card-detail {
-  height: 150px;
+  height: 170px;
 }
 .card-title {
-  margin-top: 25px;
+  margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
 }
+.card-price {
+  color: #23d89c;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 16px 0 0 0;
+}
 .card-text {
-  font-size: 12px;
+  font-size: 16px;
 }
 .checkout-btn {
   background-color: #23d89c;

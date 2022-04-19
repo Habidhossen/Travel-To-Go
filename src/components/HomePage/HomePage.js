@@ -10,24 +10,28 @@ const HomePage = () => {
     {
       id: 1,
       title: "Zip lines",
+      price: "199",
       desc: "Add some adrenalin to your travel senses by zipline tarvel.",
       image: "https://i.ibb.co/RypjCnK/zip-line.jpg",
     },
     {
       id: 2,
       title: "Kayaking",
+      price: "99",
       desc: "Kayaking makes takes thrill to the next level.",
       image: "https://i.ibb.co/1vz409v/Kayaking.jpg",
     },
     {
       id: 3,
       title: "Bungee Jump",
+      price: "119",
       desc: "Bungee jumps is one of the most exhilarating adventure.",
       image: "https://i.ibb.co/Qd32vKY/bungee-jump.jpg",
     },
     {
       id: 4,
       title: "Travel Equipments",
+      price: "149",
       desc: "Explore adventure with Trekking Hat, Jacket, Camping Shoe, Bag etc.",
       image: "https://i.ibb.co/qB6YmCx/equipments.jpg",
     },
