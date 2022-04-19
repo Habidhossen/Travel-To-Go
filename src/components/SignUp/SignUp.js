@@ -9,19 +9,19 @@ const SignUp = () => {
         <h1 className="login-title">Create an account</h1>
         <hr className="mb-4" />
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="text" placeholder="Enter name" required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" placeholder="Enter email" required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="Password" required />
           </Form.Group>
           <Form.Group className="mb-3">
             <p className="custom-form-text">
@@ -39,9 +39,9 @@ const SignUp = () => {
           </Button>
           <Form.Group className="mt-3">
             <p className="custom-form-text">
-              Forget{" "}
+              Forget your password?{" "}
               <Link className="custom-form-text-span" to="">
-                Password
+                Reset password
               </Link>
             </p>
           </Form.Group>

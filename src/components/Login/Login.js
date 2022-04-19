@@ -12,18 +12,18 @@ const Login = () => {
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" placeholder="Enter email" required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="Password" required />
           </Form.Group>
           <Form.Group className="mb-3">
             <p className="custom-form-text">
               Not a member?{" "}
               <Link to="/signup" className="custom-form-text-span">
-                Signup now
+                Signup
               </Link>
             </p>
           </Form.Group>
@@ -35,9 +35,9 @@ const Login = () => {
           </Button>
           <Form.Group className="mt-3">
             <p className="custom-form-text">
-              Forget{" "}
+              Forget your password?{" "}
               <Link className="custom-form-text-span" to="">
-                Password
+                Reset password
               </Link>
             </p>
           </Form.Group>
