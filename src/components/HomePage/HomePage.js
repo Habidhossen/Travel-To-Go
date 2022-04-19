@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banner.jpg";
+import Footer from "../Footer/Footer";
 import Service from "../Services/Service";
 import "./HomePage.css";
 
@@ -32,6 +33,7 @@ const HomePage = () => {
   ];
   return (
     <div>
+      {/* banner */}
       <section className="container">
         <div className="row mt-5">
           <div className="col-sm-6 col-md-5 col-lg-5 d-flex align-items-center">
@@ -61,6 +63,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
