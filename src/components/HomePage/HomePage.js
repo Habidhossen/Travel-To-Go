@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banner.jpg";
+import ContactMe from "../ContactMe/ContactMe";
 import Footer from "../Footer/Footer";
 import Service from "../Services/Service";
 import "./HomePage.css";
@@ -63,6 +64,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* Contact-Me Section */}
+      <ContactMe />
       {/* Footer */}
       <Footer />
     </div>
