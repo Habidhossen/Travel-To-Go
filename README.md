@@ -2,9 +2,20 @@
 
 Live Site: [https://example.netlify.app/](https://example.netlify.app/)
 
-The Camera Shop is a product analysis website in which customer give their reviews about products. This product analysis site has lots of features such as customer reviews, a dashboard, blogs, etc.
+The Travel To Go Website is especially for tourists who want a tour guide for their next adventure trip. Where a single tour guide provides many facilities. Tourists can get all services like Zip Lines, Kayaking, Bungee Jump, etc.
 
-- Customers will be able to see valuable reviews about products.
-- Anyone can see and analyze via the dashboard charts.
+- Tourists can get all services via single platform.
+- This website is protected with a Firebase Login System. So users do have not to worry about the security system.
+- User can login with Google.
+- Tourists can contact with tour guide via message form.
 - Responsive and Attractive user interface and user-friendly site.
-- This site build with React, React-Router and Tailwind CSS.
+- This site build with React, React-Router, Firebase and Bootstrap.
+
+### Uses Technologies
+
+- React
+- React Router
+- React Bootstrap
+- Firebase
+- React Firebase Hooks
+- React toast and many more.

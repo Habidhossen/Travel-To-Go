@@ -15,7 +15,7 @@ const SignUp = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     createUserWithEmailAndPassword(email, password);
-    navigate("/");
+    navigate("/checkout");
   };
 
   return (
