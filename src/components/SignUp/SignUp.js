@@ -34,17 +34,17 @@ const SignUp = () => {
           <Button className="checkout-btn w-100" type="submit">
             Register
           </Button>
-          <Button className="google-btn w-100 mt-2 " type="submit">
+          {/* <Button className="google-btn w-100 mt-2 " type="submit">
             Continue with Google
-          </Button>
-          <Form.Group className="mt-3">
+          </Button> */}
+          {/* <Form.Group className="mt-3">
             <p className="custom-form-text">
               Forget your password?{" "}
               <Link className="custom-form-text-span" to="">
                 Reset password
               </Link>
             </p>
-          </Form.Group>
+          </Form.Group> */}
         </Form>
       </div>
     </div>
