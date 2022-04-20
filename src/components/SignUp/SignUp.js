@@ -11,17 +11,32 @@ const SignUp = () => {
         <Form>
           <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter name" required />
+            <Form.Control
+              type="text"
+              name="name"
+              placeholder="Enter name"
+              required
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" required />
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              required
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" required />
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3">
             <p className="custom-form-text">
@@ -34,17 +49,6 @@ const SignUp = () => {
           <Button className="checkout-btn w-100" type="submit">
             Register
           </Button>
-          {/* <Button className="google-btn w-100 mt-2 " type="submit">
-            Continue with Google
-          </Button> */}
-          {/* <Form.Group className="mt-3">
-            <p className="custom-form-text">
-              Forget your password?{" "}
-              <Link className="custom-form-text-span" to="">
-                Reset password
-              </Link>
-            </p>
-          </Form.Group> */}
         </Form>
       </div>
     </div>

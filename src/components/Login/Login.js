@@ -1,9 +1,18 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 import "./Login.css";
 
 const Login = () => {
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const navigate = useNavigate();
+
+  if (user) {
+    navigate("/checkout");
+  }
+
   return (
     <div>
       <div className="col-4 mx-auto form-bg">
@@ -30,7 +39,10 @@ const Login = () => {
           <Button className="checkout-btn w-100" type="submit">
             Login
           </Button>
-          <Button className="google-btn w-100 mt-2" type="submit">
+          <Button
+            onClick={() => signInWithGoogle()}
+            className="google-btn w-100 mt-2"
+          >
             Login with Google
           </Button>
           <Form.Group className="mt-3">
