@@ -1,0 +1,17 @@
+.about-img {
+  width: 130px;
+  border-radius: 50%;
+  border: 2px solid #23d89c;
+}
+.about-title {
+  color: #23d89c;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.about-desc {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
