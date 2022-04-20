@@ -1,17 +1,22 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
 
 const Login = () => {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user] = useSignInWithGoogle(auth);
+  const location = useLocation();
   const navigate = useNavigate();
 
-  if (user) {
-    navigate("/checkout");
-  }
+  const from = location?.state?.from?.pathname || "/";
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle().then(() => {
+      navigate(from, { replace: true });
+    });
+  };
 
   return (
     <div>
@@ -40,7 +45,7 @@ const Login = () => {
             Login
           </Button>
           <Button
-            onClick={() => signInWithGoogle()}
+            onClick={() => handleGoogleSignIn()}
             className="google-btn w-100 mt-2"
           >
             Login with Google

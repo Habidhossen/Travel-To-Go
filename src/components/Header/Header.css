@@ -6,6 +6,16 @@
 .nav-link {
   font-size: 18px;
   font-weight: 500;
-  margin-left: 16px;
+  margin-left: 20px;
   color: green;
+}
+.logout-btn {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+  border: none;
+  background-color: deeppink;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
