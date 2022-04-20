@@ -10,8 +10,8 @@ const ContactMe = () => {
         <img className="img-fluid" src={image} alt="" />
       </div>
       <div className="col-sm-6 col-md-6 col-lg-6 d-flex flex-column justify-content-center">
-        <input type="text" name="" placeholder="First Name" />
-        <input type="text" name="" placeholder="Last Name" />
+        <input type="text" name="" placeholder="First name" />
+        <input type="text" name="" placeholder="Last name" />
         <input type="email" name="" placeholder="Whats your email?" />
         <textarea
           placeholder="Your questions..."

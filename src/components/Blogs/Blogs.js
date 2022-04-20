@@ -20,17 +20,21 @@ const Blogs = () => {
       </h5>
       <p className="mb-4">
         I using firebase because it's provides multiple ways of authenticating
-        users.
+        users. There are many options for authentications, for a self-hosted
+        solution, Keycloak is a pretty robust option. For service, Auth0 and
+        Okta have quite a lot of features. They also offer a free trial with
+        reasonable limits.
       </p>
       <h5>
         What other services does firebase provide other than authentication?
       </h5>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque magni
-        totam consequuntur temporibus aliquam cupiditate, quo possimus sit
-        consectetur quam. Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Cumque magni totam consequuntur temporibus aliquam cupiditate, quo
-        possimus sit consectetur quam.
+        Firebase is originally developed by Firebase inc and later acquired by
+        Google. It provides different kinds of services that help to develop
+        high-quality mobile and web applications. There are lots of services
+        that provide firebase, which are Cloud Storage, Hosting, Authentication,
+        Cloud messaging, Real-time Database, and the Cloud function, etc.
+        Firebase is full of packages for developing mobile and web development.
       </p>
     </div>
   );
