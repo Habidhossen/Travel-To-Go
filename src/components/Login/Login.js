@@ -73,7 +73,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="col-4 mx-auto form-bg">
+      <div className="col-sm-12 col-md-6 col-lg-4 mx-auto form-bg">
         <h1 className="login-title">Please login</h1>
         <hr className="mb-4" />
         <Form onSubmit={handleEmailSignIn}>
