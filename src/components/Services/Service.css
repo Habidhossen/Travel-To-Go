@@ -10,7 +10,7 @@
 }
 .card-img {
   border-radius: 10px;
-  width: 230px;
+  width: 100%;
 }
 .card-detail {
   height: 170px;
