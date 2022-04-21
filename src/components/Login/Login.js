@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
 
 const Login = () => {
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   // const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // const from = location?.state?.from?.pathname || "/";
+  const from = location?.state?.from?.pathname || "/";
 
   // handle google sign-in
   const handleGoogleSignIn = () => {
@@ -27,11 +33,25 @@ const Login = () => {
   // handle email-password sign-in
   const handleEmailSignIn = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
-    navigate("/checkout");
-    // navigate(from, { replace: true });
+    console.log("user login");
+    // navigate("/");
+    navigate(from, { replace: true });
+  };
+
+  // reset password and toast
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      console.log("sent");
+      // toast("Sent email");
+    } else {
+      // toast("please enter your email address");
+      console.log("enter email");
+    }
   };
 
   return (
@@ -44,7 +64,7 @@ const Login = () => {
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
-              name="email"
+              ref={emailRef}
               placeholder="Enter email"
               required
             />
@@ -54,7 +74,7 @@ const Login = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
-              name="password"
+              ref={passwordRef}
               placeholder="Password"
               required
             />
@@ -70,21 +90,22 @@ const Login = () => {
           <Button className="checkout-btn w-100" type="submit">
             Login
           </Button>
-          <Button
-            onClick={() => handleGoogleSignIn()}
-            className="google-btn w-100 mt-2"
-          >
-            Login with Google
-          </Button>
-          <Form.Group className="mt-3">
-            <p className="custom-form-text">
-              Forget your password?{" "}
-              <Link className="custom-form-text-span" to="">
-                Reset password
-              </Link>
-            </p>
-          </Form.Group>
         </Form>
+        <Button
+          onClick={() => handleGoogleSignIn()}
+          className="google-btn w-100 mt-2"
+        >
+          Login with Google
+        </Button>
+        <p className="custom-form-text mt-3">
+          Forget your password?{" "}
+          <button
+            onClick={resetPassword}
+            className="btn btn-link text text-primary mb-1 ps-0 fw-bold text-decoration-none"
+          >
+            Reset password
+          </button>
+        </p>
       </div>
     </div>
   );
