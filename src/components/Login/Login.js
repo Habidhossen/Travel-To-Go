@@ -6,6 +6,8 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../../firebase.init";
 import "./Login.css";
 
@@ -46,11 +48,9 @@ const Login = () => {
     const email = emailRef.current.value;
     if (email) {
       await sendPasswordResetEmail(email);
-      console.log("sent");
-      // toast("Sent email");
+      toast("sent reset email successfully!");
     } else {
-      // toast("please enter your email address");
-      console.log("enter email");
+      toast("please enter your email!");
     }
   };
 
@@ -106,6 +106,8 @@ const Login = () => {
             Reset password
           </button>
         </p>
+        {/* Toast Container */}
+        <ToastContainer />
       </div>
     </div>
   );
