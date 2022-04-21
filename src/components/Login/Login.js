@@ -5,25 +5,45 @@ import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../firebase.init";
+import Loading from "../Loading/Loading";
 import "./Login.css";
 
 const Login = () => {
+  // use ref
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
-  const [signInWithGoogle] = useSignInWithGoogle(auth);
-  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
-  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  // react firebase hook
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword, user1, loading1, error1] =
+    useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, resetError] =
+    useSendPasswordResetEmail(auth);
 
   // const location = useLocation();
   const navigate = useNavigate();
-  const location = useLocation();
 
-  const from = location?.state?.from?.pathname || "/";
+  // declare variable for error message
+  let errorElement;
+
+  if (user || user1) {
+    // navigate(from, { replace: true });
+    navigate("/checkout");
+  }
+  if (loading || sending || loading1) {
+    return <Loading />;
+  }
+  if (error || error1 || resetError) {
+    errorElement = (
+      <p className="text-danger">
+        Error: {error?.message || error1?.message || resetError?.message}
+      </p>
+    );
+  }
 
   // handle google sign-in
   const handleGoogleSignIn = () => {
@@ -38,9 +58,6 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
-    console.log("user login");
-    // navigate("/");
-    navigate(from, { replace: true });
   };
 
   // reset password and toast
@@ -79,6 +96,10 @@ const Login = () => {
               required
             />
           </Form.Group>
+
+          {/* error element */}
+          {errorElement}
+
           <Form.Group className="mb-3">
             <p className="custom-form-text">
               Not a member?{" "}

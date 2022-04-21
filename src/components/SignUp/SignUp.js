@@ -3,19 +3,35 @@ import { Button, Form } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import Loading from "../Loading/Loading";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
 
+  // declare variable for error message
+  let errorElement;
+
+  if (user) {
+    navigate("/checkout");
+  }
+  // loading
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    errorElement = <p className="text-danger">Error: {error?.message}</p>;
+  }
+
+  // handle register
   const handleRegister = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     createUserWithEmailAndPassword(email, password);
-    navigate("/checkout");
+    // navigate("/checkout");
   };
 
   return (
@@ -53,6 +69,10 @@ const SignUp = () => {
               required
             />
           </Form.Group>
+
+          {/* error element */}
+          {errorElement}
+
           <Form.Group className="mb-3">
             <p className="custom-form-text">
               Already have an account?{" "}
